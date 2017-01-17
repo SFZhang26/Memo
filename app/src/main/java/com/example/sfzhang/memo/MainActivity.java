@@ -6,7 +6,10 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -38,6 +41,10 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         Connector.getDatabase();
         //addDataLitepPal();
         loadHistoryData();
@@ -49,6 +56,23 @@ public class MainActivity extends AppCompatActivity
         lv.setOnItemClickListener(this);
         lv.setOnItemLongClickListener(this);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar,menu);
+        return true;
+    }
+
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.settings:
+                onAdd();
+                break;
+            default:
+        }
+        return true;
     }
 
     private void loadHistoryData() {
@@ -234,7 +258,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     //press the add button
-    public void onAdd(View v) {
+    public void onAdd() {
         Intent it=new Intent(this,Edit.class);
 
         int position = memolist.size();

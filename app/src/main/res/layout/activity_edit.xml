@@ -47,8 +47,8 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/alarmButton"
-                android:src="@android:drawable/ic_lock_idle_alarm"
-                android:onClick="setAlarm" />
+                android:onClick="setAlarm"
+                android:background="@drawable/alarm" />
         </LinearLayout>
 
     </LinearLayout>
@@ -91,7 +91,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="24dp"
+        android:layout_height="20dp"
         android:layout_gravity="center"
         android:alpha="0.8"
         android:layout_weight="0.93">
@@ -184,20 +184,22 @@
         </RadioGroup>
 
         <Space
-            android:layout_width="20dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:text="SAVE"
             android:id="@+id/saveButton"
             android:onClick="onSave"
             android:maxWidth="10dp"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:background="@drawable/ic_menu_save"
+            android:layout_margin="0dp" />
 
         <Space
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="fill_parent" />
     </LinearLayout>
 

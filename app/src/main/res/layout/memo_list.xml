@@ -72,7 +72,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/alarm"
                     android:layout_weight="0"
-                    android:src="@android:drawable/ic_lock_idle_alarm"
+                    android:src="@drawable/alarm"
                     android:layout_gravity="center" />
             </LinearLayout>
 
