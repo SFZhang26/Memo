@@ -1,4 +1,4 @@
-# MyMemo
+# Memo
 a little memo on android device <br>
 ` alarm clock `  can be added to each memo <br>
 Some screenshots are shown as below: <br>
